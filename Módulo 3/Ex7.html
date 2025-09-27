@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE ESTRUTURA DE REPETIÇÃO DO WHILE
+        alert("Contador de Números");
+        var contador = 1;
+        var negativo = 0;
+        var numero = +prompt("Quantos números deseja digitar? ")
+
+        do{
+           var valor = +prompt("Digite o " + contador + "° valor:");
+            if (valor < 0 ){
+                negativo = negativo + 1;
+            }
+           contador = contador + 1;
+        }while(contador <= numero);
+
+        document.write("A quantidade de números negativos são: " + negativo);
+    </script>
+</body>
+</html>

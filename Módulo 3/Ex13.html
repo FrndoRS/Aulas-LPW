@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ATIVIDADE USANDO FOR
+        alert("Análise de Salário");
+        var anoatual, salario, novosalario, percentual;
+        anoatual = +prompt("Digite o ano atual: ");
+        salario = +prompt("Digite o valor do salário inicial: ");
+        percentual = (1.5/ 100);
+        novosalario = salario + percentual * salario;
+        document.write("Salário com primeiro aumento R$" + novosalario);
+        document.write("<br>");
+
+      for(i = 2020; i <= anoatual; i++){
+       percentual =  2 * percentual;
+       novosalario = novosalario + percentual * novosalario;
+       document.write("Ano" + i +", novo salario R$" + novosalario);
+       document.write("<br>");
+      }
+    </script>
+</body>
+</html>
