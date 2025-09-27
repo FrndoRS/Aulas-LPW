@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE ESTRUTURA CONDICIONAL SIMPLES
+        alert("Analisador de Idade")
+        var nome = prompt("Digite o nome: ");
+        var anoAtual = +prompt("Digite o ano atual: ");
+        var anoNasc = +prompt("Digite o ano de nascimento: ");
+
+        var idade = (anoAtual - anoNasc);
+
+        if (idade > 21) {
+            window.alert(nome+ " você tem" +idade+" anos e possui marioridade!") // um pop up abre e mostra o resultado
+            document.write(nome+ " você tem" +idade+" anos e possui marioridade!")
+        }
+    </script>
+</body>
+</html>
