@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE FUNÇÕES NÍVEL AVANÇADO
+        alert("Cálculo de Equação do 2°");
+
+        function saltoLinha() {
+            document.write("<br>") 
+        }
+
+        function calculaDelta(a,b,c){
+            return (b*b - 4*a*c);
+        }
+
+        var a = +prompt("Entre com o valor de a: ");
+        var b = +prompt("Entre com o valor de b: ");
+        var c = +prompt("Entre com o valor de c: ");
+
+        var delta = calculaDelta(a,b,c) 
+        // Chamando a function "calculaDelta", os valores a,b,c atuam e o resultado vai ser atribuido a variavel delta
+        document.write("O valor de delta é " + delta);
+        saltoLinha();
+
+        if (delta < 0){
+            document.write("Está equação não possui raízes reais");
+        } else if (delta == 0) {
+            var raiz1 = (-b + Math.sqrt(delta))/(2*a); // O "Math.sqrt" é uma função interna do JS que calcula raiz quadrada
+            document.write("Está equação possui uma raiz: " + raiz);
+        } else {
+            var raiz1 = (-b + Math.sqrt(delta))/(2*a);
+            var raiz2 = (-b - Math.sqrt(delta))/(2*a);
+            document.write("Está equação possui duas raízes: " + raiz1 + " e " + raiz2);
+        }
+    </script>
+</body>
+</html>

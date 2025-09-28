@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ATIVIDADE DE FUNÇÕES
+        alert("Análise de fatorial");
+
+        function fatorial(num) { // Params num
+            if (num < 0)
+                return -1; // Indicar que não existe
+            else if (num == 0)
+                return 1;
+            else{
+                return (num * fatorial(num-1));
+            }
+        }
+        var num = +prompt("Digite o número para obter o fatorial")
+        document.write("O fatorial é " + fatorial(num));
+
+    </script>
+</body>
+</html>
