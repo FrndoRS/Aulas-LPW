@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ATIVIDADE DE INSERTION SORT
+        alert("Jogo da Mega Sena: ");
+        var dezena = new Array(6);
+        var aux = 0;
+
+        for (i= 0; i < dezena.length; i++){
+            dezena[i] = Math.floor(Math.random()*61); // Na mega tem 60 numeros
+        }
+
+        for (var i= 0; i< dezena.length-1; i++){
+            for (var j=i+1; j< dezena.length; j++){
+                if (dezena[i] > dezena[j]){ // Ou seja o primeiro valor é maior que o segundo valor?
+                    aux= dezena[i];
+                    dezena[i] = dezena[j];
+                    dezena[j] = aux;
+                }
+            }
+        }
+
+        for (var i = 0; i < dezena.length; i++){
+            document.write(dezena[i] + "   ");
+        }
+    </script>
+</body>
+</html>

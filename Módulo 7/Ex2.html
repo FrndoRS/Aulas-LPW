@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE SELECIONAR E ORDENAR - SELECTION SORT
+        alert("Selection Sort: Selecionando e Ordenando");
+
+        var v = new Array(5);
+
+        for (var i = 1; i < 6; i++){ 
+            v[i] = +prompt("Digite o " + i + "º número:");
+        }
+                                             // 52, 130, 200, 71, 85 | 52, 130, 200, 71, 85 | 52, 71, 200, 130, 85
+        for (var i = 1; i < 5; i++){         // i= 1                 | i=2                  | i=2 
+            var menor = i                    // menor= 1             | menor = 2            | menor = 2
+            for (var j = i + 1; j < 6; j++){ // j= 2                 | j= 3                 | j= 4
+                if (v[j] < v[menor]){        // v[2] 52 < v[1] 130   | v[3] 200 < v[2] 130  | v[4] 71 < v[2] 130
+                    menor = j;               // menor = 2            | Não faço nada        | menor = 4 // O v[5] n é menor então o laço encerra
+                }                            // PRIMEIRA RODADA      | SEGUNDA RODADA       | SEGUNDA RODADA
+            }         
+            if (menor != i){
+                var aux = v [i];             // aux = v[1] 130       | aux = v[2] 130
+                v[i] = v[menor];             // v[1] = 52            | v[2] = v[4] 71
+                v[menor] = aux;              // v[2] = 130           | v[2] = 71
+            }
+        }
+
+        for (var i = 1; i < 6; i++){
+            document.write(v[i] + "   " );
+        }
+        // Esse laço for é so pra imprimir o vetor de forma ordenada
+        
+    </script>
+</body>
+</html>

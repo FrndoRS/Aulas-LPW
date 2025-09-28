@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ATIVIDADE DE INSERTION SORT
+        alert("Insertion Sort: Selecionando e Ordenando");
+
+        var numeros = new Array(8);
+        
+        document.write("========ORDEM ORIGINAL======== <br>");
+        for (var c = 1; c < 9; c++){ 
+            numeros[c] = +prompt("Digite o " + c + "º número:");
+            document.write(numeros[c] + "   ");
+        }
+
+        document.write("<br>");
+        document.write("========ORDEM CRESCENTE======== <br>");
+        for (var c = 1; c < 8; c++){ // Vai de C1 ate um valor menor q 8
+           for (var k= c + 1; k < 9; k++){ // Vai de C + 1 até um valor menor q 9
+            if (numeros[c] > numeros[k]){ // Ex: Se o C em 1 for menor q o C em 2 ocorre a troca
+                var aux = numeros [c];
+                numeros[c] = numeros[k];
+                numeros[k] = aux;
+            }
+           }
+        } // E vai indo assim por diante, tipo termina C1 vai par C2, e vai indo em ordem crescente
+
+        for (var c = 1; c < 9; c++) {
+            document.write(numeros[c] + "   ");
+        }
+
+        document.write("<br>");
+         document.write("========ORDEM DECRESCENTE======== <br>");
+        for (var c = 1; c < 8; c++){ 
+           for (var k= c + 1; k < 9; k++){ 
+            if (numeros[c] < numeros[k]){ 
+                var aux = numeros [c];
+                numeros[c] = numeros[k];
+                numeros[k] = aux;
+            }
+           }
+        } 
+         for (var c = 1; c < 9; c++) {
+            document.write(numeros[c] + "   ");
+        }
+    </script>
+</body>
+</html>
