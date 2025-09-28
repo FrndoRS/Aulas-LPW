@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE ARRAYS UNIDIMENSIONAL - VETORES
+        alert("Somando variável com vetores");
+
+        var vetor = new Array(4);
+        var num = 10; // inicializa no valor 10
+
+        for (var i = 0; i < vetor.length; i++){
+            vetor[i] = +prompt("Digite o elemento " + i + " :");
+            num = num + vetor[i];
+            document.write("Elemento " + i + ": " + num);
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

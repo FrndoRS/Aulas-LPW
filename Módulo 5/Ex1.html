@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE ARRAYS UNIDIMENSIONAL - VETORES
+        alert("Criando Vetores");
+
+        var vetorNum = new Array(5);
+        vetorNum[0] = 1;
+        vetorNum[1] = 4;
+        vetorNum[2] = 7;
+        vetorNum[3] = 9;
+        vetorNum[4] = 2;
+
+        for (var c=0; c<5; c++){ // c= 0, c é menor q 5, c incrementa de um em um
+            document.write("Na posição " + c + ", temos o valor: " + vetorNum[c]);
+            document.write("<br>");
+        } // 1° Forma de fazer
+
+        var outroVetorNum = [1, 4, 7, 9, 2];
+        for (var i=0; i<5; i++){ 
+            document.write("Na posição " + i + ", temos o valor: " + outroVetorNum[i]);
+            document.write("<br>");
+        } // 2° Forma de fazer
+
+        document.write("<br>--------- Tamanho do Vetor ---------<br>");
+        document.write("O vetorNum tem tamanho: " + vetorNum.length + "<br>");
+        document.write("O outrovetorNum tem tamanho: " + outroVetorNum.length);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE ARRAYS BIDIMENSIONAL - MATRIZES
+        alert("Criando Matrizes");
+
+        var matrizA= [[1, 2], [4,5]];
+        var matrizB= [[7, 8], [10,11]];
+        var matrizsoma=[[0,0], [0,0]];
+        var matrizmulti=[[0,0], [0,0]];
+
+        //soma
+        for (var i = 0; i < matrizA.length; i++) { // percorre linha da matrizA
+            for (var j = 0; j < matrizA.length; j++) { // percorre coluna da matrizA
+                matrizsoma[i][j] = matrizA[i][j] + matrizB[i][j];
+            }
+        }
+
+        //multi
+        for (var i = 0; i < matrizA.length; i++) { // percorre linha da matrizA
+            for (var j = 0; j < matrizB[i].length; j++) { // percorre coluna da matrizA
+                for (var k = 0; k < 2; k++) {
+                    matrizmulti[i][j] += matrizA[i][k] * matrizB[i][k]; 
+                    //oq é o += ? | Ex: (P += 9) => (P = P + 9)
+                }
+            }
+        }
+
+        //imprimir soma
+        document.write("Matriz Soma:");
+         for (var i = 0; i < matrizA.length; i++) { 
+            document.write("<br>")
+            for (var j = 0; j < matrizA.length; j++) { 
+                document.write(matrizsoma[i][j] + "\t");
+            }
+        }
+
+        //imprimir multi
+        document.write("<br><br>")
+        document.write("Matriz Multiplicação:");
+        for (var i = 0; i < matrizmulti.length; i++) { 
+            document.write("<br>");
+        for (var j = 0; j < matrizmulti[i].length; j++) { 
+            document.write(matrizmulti[i][j] + "\t");
+        }
+    }
+    </script>
+</body>
+</html>
