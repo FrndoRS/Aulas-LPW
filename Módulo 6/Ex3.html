@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE ENCONTRANDO O MENOR VALOR - SOLUÇÃO COM VETORES
+        alert("Procurando o menor valor de um produto");
+
+        var valorProduto = new Array(5);
+        var menor = 1;
+        for (var i = 0; i < valorProduto.length; i++) {
+            valorProduto[i] = +prompt("Digite o " + i + "º valor:");
+
+            if (valorProduto[i] < valorProduto[menor]){ 
+                menor = i;
+            }
+        }
+        document.write("O menor valor é: " + valorProduto[menor]);
+
+        /* Esse tá errado: Apesar do código funcionar corretamente para este exemplo, 
+        perceba que ele só funciona porque o menor valor está exatamente na segunda posição.
+        No entanto, se o menor valor for alterado de posição, ou seja, se mudarem o menor valor 
+        para primeira posição, o resultado falha na procura correta. 
+        Um exemplo prático é, ao entrar com os valores 130, 52, 200, 85 e 71, o código consegue a
+        presentar a resposta de menor valor que é 52. No entanto, ao trocar as posições de entrada dos 
+        números, como por exemplo 52, 130, 200, 85 e 71, a resposta apresentada acaba sendo errada.
+        Logo a melhor resposta para o problema é: */
+
+        alert("Procurando o menor valor de um produto");
+
+        var valorProduto = new Array(5);
+        var menor = 0;
+        for (var i = 0; i < valorProduto.length; i++) {
+            valorProduto[i] = +prompt("Digite o " + (i + 1) + "º valor:");
+
+            if (valorProduto[i] < valorProduto[menor]){ 
+                menor = i;
+            }
+        }
+        document.write("O menor valor é: " + valorProduto[menor]);
+    </script>
+</body>
+</html>

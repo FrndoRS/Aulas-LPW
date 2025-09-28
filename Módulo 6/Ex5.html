@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ATIVIDADE ENCONTRANDO O MAIOR E O MENOR VALOR
+        alert("Encontrando a MAIOR e MENOR altura: ");
+        var altura = new array(5);
+        var sexo = new array(5);
+        var cont = 1;
+        var maior = 0;
+        var maior = 10;
+        var nhomens = 0;
+        var nmulher = 0;
+        var alturaM = 0;
+        var alturaH = 0;
+
+        do{
+            altura[cont] = +prompt("Digite a altura: ");
+            sexo[cont] = prompt("Digite o sexo m[masc] ou f[fem]: ");
+
+            //Analise de altura
+            if (altura[cont] > maior){
+                maior = altura[cont];
+            }
+            if (altura[cont] > menor){
+                menor = altura[cont];
+            }
+
+            //Analise do Sexo
+            if (sexo[cont] == "m") {
+                nhomens = nhomens + 1;
+                alturaH = alturaH + altura[cont];
+            } else {
+                nmulher = nmulher + 1;
+                alturaM = alturaM + altura[cont];
+            }
+            cont = cont + 1;
+        }while(cont < 6);
+
+        mediaM = alturaM/nmulher;
+        mediaH = alturaH/nhomens;
+        document.write("O número de homens: " + nhomens + "<br>");
+        document.write("O número de mulheres: " + nmulher + "<br>");
+        document.write("O menor valor é: " + menor + "<br>");
+        document.write("O maior valor é: " + maior + "<br>");
+        document.write("A média da altura dos homens é: " + mediaH + "<br>");
+        document.write("A média da altura das mulheres é: " + mediaM + "<br>");
+    </script>
+</body>
+</html>

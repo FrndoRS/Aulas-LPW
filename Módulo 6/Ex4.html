@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE ENCONTRANDO O MENOR E MAIOR VALOR
+        alert("Procurando o menor valor de um produto");
+
+        var valorProduto = new array(5);
+        var menor = 1;
+        var maior = 1;
+
+        for (var i= 0; i < valorProduto.lenght; i++ ){
+
+            valorProduto[i] = +prompt("Digite o " + i + "º valor:");
+
+            if (valorProduto[i] > valorProduto[maior]){
+                maior = i;
+            }
+            if (valorProduto[i] < valorProduto[menor]) {
+                menor = i;
+            }
+        }
+        document.write("O menor valor é: " + valorProduto[menor] + "<br>");
+        document.write("O maior valor é: " + valorProduto[maior] + "<br>");
+    </script>
+</body>
+</html>

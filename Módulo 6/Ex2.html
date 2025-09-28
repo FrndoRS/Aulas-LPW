@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // AULA DE ENCONTRANDO O MENOR VALOR - SOLUÇÃO SOFISTICADA
+        alert("Procurando o menor valor de um produto");
+
+        var i = 1; // É tipo digite o valor do primeiro carro
+        while(i<=5){ // 5 pq estamos trabalhando com 5 carros
+            var atual = +prompt("Digite o " + i + "º valor:");
+            if (i==1){ // se é o primeiro carro, so tem um valor. Logo n tem como comparar
+                var maisBarato = atual;
+            }else {
+                if (atual < maisBarato) {
+                    maisBarato = atual;
+                }
+            }
+            i = i + 1; // quando chegar 6 ele para já que é menor igual a 5
+        }
+
+        document.write("O menor valor é: " + menor );
+    </script>
+</body>
+</html>
